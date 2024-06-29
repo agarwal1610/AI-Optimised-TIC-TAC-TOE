@@ -1,50 +1,41 @@
 <!DOCTYPE html>
-<html lang = "en" >
-    <head>
-        <meta charset = "UTF-8">
-        <title>TIC TAC TOE GAME | BY ADITYA AGARWAL</title>
-        <link rel = "stylesheet" href="style.css">
-        <script src="script.js"></script>
-    </head>
-
-    <body>
-        <!-- select box -->
-        <div class="select-box">
-            <header>TIC TAC TOE</header>
-            <div class="content">
-                <div class="title">SELECT WHICH ONE YOU WANT TO BE</div>
-                <div class="options">
-                    <button class="PlayerX">Player (x)</button>
-                    <button class="PlayerO">Player (o)</button>
-                </div>
-            </div>
-        </div> 
-        
-        <!-- playboard section -->
-         <div class="play-board">
-            <div class="details">
-                <div class="players">
-                    <span class="Xturn active">X's TURN</span>
-                    <span class="Oturn">O's TURN</span>
-                </div>
-            </div>
-            <div class="play-area">
-                <section>
-                    <span class="box1"></span>
-                    <span class="box1"></span>
-                    <span class="box1"></span>
-                </section>
-                <section>
-                    <span class="box4"></span>
-                    <span class="box5"></span>
-                    <span class="box6"></span>
-                </section>            
-                <section>
-                    <span class="box7"></span>
-                    <span class="box8"></span>
-                    <span class="box9"></span>
-                </section>
-            </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="cssttt.css">
+</head>
+<body>
+    <div class="msg-container hide">
+        <p id="msg">Winner</p>
+        <button id="new-btn">New Game</button>
+    </div>
+    <div class="select-container">
+        <h1>SELECT MODE</h1>
+        <button id="pvp-btn">Player vs Player</button>
+        <button id="pvb-btn">Player vs Bot</button>
+    </div>
+    <div class="difficulty hide">
+        <h1></h1>
+        <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+        <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+        <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+    </div>
+    <div class="grid-size-container hide">
+        <h1>SELECT GRID SIZE</h1>
+        <button class="grid-size-btn" data-grid="3">3x3</button>
+        <button class="grid-size-btn" data-grid="4">4x4</button>
+        <button class="grid-size-btn" data-grid="5">5x5</button>
+    </div>
+    
+    <main class="hide">
+        <h1>Tic Tac Toe</h1>
+        <div class="container">
+            <div class="game"></div>
         </div>
-    </body>
+        <button id="reset-btn">Reset Game</button>
+    </main>
+    <script src="jsttt.js"></script>
+</body>
 </html>
