@@ -1,110 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-    margin : 0;
-    padding : 0;
-    box-sizing : border-box;
-    font-family : "Poppins",sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
-    background: #56baed;
+
+body {
+    background-color: #0d0d0d; /* Dark background */
+    color: #39ff14; /* Neon green text */
+    text-align: center;
 }
-.select-box, .play-board{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.select-box{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: #fff;
-    padding: 20px 25px 25px;
-    border-radius: 5px;
-    max-width: 330px;
-    width: 100%;
+
+.game {
+    display: grid;
+    gap: 1.5vmin;
+}
+
+.box {
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    font-size: calc(30vmin / var(--grid-size, 3)); /* Adjust size here */
+    color: #b0413e; /* Reddish color for X */
+    background-color: #ffffc7; /* Light yellow background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#reset-btn, #new-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #191913; /* Dark background for buttons */
+    color: #ffffff; /* White text for buttons */
+    border-radius: 1rem;
+    border: none;
+    margin-top: 10px;
+}
+
+#msg {
+    color: #ffffc7; /* Light yellow text for messages */
+    font-size: 5vmin;
+}
+
+.msg-container {
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.hide {
     display: none;
 }
-.select-box header{
-    font-size: 23px;
-    font-weight: 600;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ccc;
+
+.select-container, .difficulty, .grid-size-container {
+    margin: 20px;
 }
-.select-box .title{
-    font-size: 18px;
-    font-weight: 500; 
-    margin: 20px 0;
-}
-.select-box .options{
-    display: flex;
-    width: 100%;
-}
-.options button{
-    width: 100%;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 0;
+
+.select-container button, .difficulty button, .grid-size-container button {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #39ff14; /* Dark background for buttons */
+    color: #1e2020; /* Bright red text for buttons */
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
     border: none;
-    outline: none;
-    background: #56baed;
-    border-radius: 5px;
-    color: #fff;
+    margin: 10px;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
-.options button:hover{
-    transform: scale(0.9);
-}
-.options button.playerX{
-    margin-right: 5px;
-}
-.options button.playerO{
-    margin-left: 5px;
-}
-.play-board .details{
-    background: #fff;
-    padding: 7px;
-    border-radius: 5px;
-}
-.play-board .details .players{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-.play-board .details span{
-    /* background-color: red;  */
-    width: 100%;
-     color: #56baed;
-     border-radius: 5px;
-     padding: 7px 0;
-     font-size: 19px;
-     font-weight: 500;
-     cursor: default;
-     text-align: center;
-}
-.details span.active{
-    color: #fff;
-    background: #56baed;
-} 
-.play-board .play-area{
-    margin-top: 20px;
-}
-.play-board section{
-    display: flex;
-}
-.play-board section span{
-    display: block;
-    margin: 2px;
-    height: 80px;
-    width: 80px;
-    border-radius:5px;
-    background: #fff;
-    font-size: 40px;
-    text-align:center;
-    line-height: 80px;
-    color: #56baed;
-}
+
 
 /* till 7:20 */
